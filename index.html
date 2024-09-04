@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My HTML Page</title>
+    <title>Favorite Color Check</title>
 </head>
 <body>
-    <h1>Welcome to My HTML Page!</h1>
+    <h1>What's Your Favorite Color?</h1>
+
+    <label for="colorInput">Enter a color:</label>
+    <input type="text" id="colorInput" placeholder="e.g., blue">
+    <button onclick="checkColor()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        const favoriteColor = "blue"; // Your favorite color
+
+        function checkColor() {
+            const userColor = document.getElementById("colorInput").value.toLowerCase();
+            const resultElement = document.getElementById("result");
+
+            if (userColor === favoriteColor) {
+                resultElement.textContent = "Yes! That's my favorite color too!";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "No, that's not my favorite color.";
+                resultElement.style.color = "red";
+            }
+        }
+    </script>
 </body>
 </html>
