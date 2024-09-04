@@ -6,9 +6,9 @@
     <title>Favorite Color Check</title>
 </head>
 <body>
-    <h1>What's Your Favorite Color?</h1>
+    <h1>What is your favorite color?</h1>
 
-    <label for="colorInput">Enter a color:</label>
+    <label for="colorInput">Enter your favorite color:</label>
     <input type="text" id="colorInput" placeholder="e.g., blue">
     <button onclick="checkColor()">Check</button>
 
@@ -22,11 +22,11 @@
             const resultElement = document.getElementById("result");
 
             if (userColor === favoriteColor) {
-                resultElement.textContent = "Yes! That's my favorite color too!";
-                resultElement.style.color = "green";
+                resultElement.textContent = "Cool! That's my favorite color too!";
+                resultElement.style.color = "magenta";
             } else {
-                resultElement.textContent = "No, that's not my favorite color.";
-                resultElement.style.color = "red";
+                resultElement.textContent = "Your favorite color is nice. My favorite color is magenta.";
+                resultElement.style.color = userColor;
             }
         }
     </script>
