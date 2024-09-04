@@ -25,8 +25,9 @@
                 resultElement.textContent = "Cool! That's my favorite color too!";
                 resultElement.style.color = "magenta";
             } else {
-                resultElement.textContent = "Your favorite color is nice. My favorite color is magenta.";
-                resultElement.style.color = userColor;
+                resultElement.innerHTML = `<span style="color:${userColor};">Your favorite color is nice.</span> ` +
+                                          `<span style="color:magenta;">My favorite color is magenta.</span>`;
+            }
             }
         }
     </script>
