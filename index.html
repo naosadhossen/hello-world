@@ -20,6 +20,7 @@
         function checkColor() {
             const userColor = document.getElementById("colorInput").value.toLowerCase();
             const resultElement = document.getElementById("result");
+            const resultElement2 = document.getElementById("result2");
 
             if (userColor === favoriteColor) {
                 resultElement.textContent = "Cool! That's my favorite color too!";
@@ -27,6 +28,8 @@
             } else {
                 resultElement.textContent = "Your favorite color is nice. My favorite color is magenta.";
                 resultElement.style.color = userColor;
+                resultElement2.textContent = "My favorite color is magenta.";
+                resultElement2.style.color = favoriteColor;
             }
         }
     </script>
