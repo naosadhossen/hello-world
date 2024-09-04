@@ -13,6 +13,7 @@
     <button onclick="checkColor()">Check</button>
 
     <p id="result"></p>
+    <p id="myFavColor"></p>
 
     <script>
         const favoriteColor = "magenta"; // Your favorite color
@@ -20,14 +21,16 @@
         function checkColor() {
             const userColor = document.getElementById("colorInput").value.toLowerCase();
             const resultElement = document.getElementById("result");
+            const myFavElement = document.getElementById("myFavColor");
 
             if (userColor === favoriteColor) {
                 resultElement.textContent = "Cool! That's my favorite color too!";
                 resultElement.style.color = favoriteColor;
             } else {
-                resultElement.textContent = "Your favorite color is nice. " +
-                                            "My favorite color is magenta.";
+                resultElement.textContent = "Your favorite color is nice." ;
                 resultElement.style.color = userColor;
+                myFavElement.textContent="My favorite color is magenta";
+                myFavElement.style.color=favoriteColor;
             }
             }
         }
